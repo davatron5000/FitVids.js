@@ -1,1 +1,52 @@
-My Github Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>FitVids.JS - A lightweight, easy-to-use jQuery plugin for fluid width video embeds.</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	
+	<!-- javascripts -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="http://use.typekit.com/okm4wqr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+ 	<script src="js/jquery.fittext.js"></script>
+ 	<script src="js/jquery.fitvids.js"></script>
+	
+</head>
+
+<body>
+
+<div class="container">
+	<header>
+		<h1  data-content="FitVids.JS"><b data-content="FitVids.JS">FitVids.JS</b></h1>
+
+    <iframe width="480" height="390" src="http://www.youtube.com/embed/7_rBidCkJxo" frameborder="0" allowfullscreen></iframe>
+
+	</header>
+	
+	<section id="details" >
+	<p>A lightweight, easy-to-use jQuery plugin for fluid width video&nbsp;embeds.</p>
+	<a href="" class="download">Download<br/>On Github</a>
+	</section>
+	<footer>
+	<p>FitVids.js was built by <a href="http://chriscoyier.net/">Chris Coyier</a> and <a href="http://paravelinc.com/">Paravel</a><br>See also: <a href="http://letteringjs.com">Lettering.js</a> and <a href="http://fittextjs.com">FitText</a></p>
+	</footer>
+	
+	
+	<script type="text/javascript">
+    $(".download").lettering('lines');
+		$("h1").fitText(0.515);
+		$(".line1").fitText(.8);
+		$(".line2").fitText(.94);
+		$(".container").fitVids();
+	</script>
+
+
+	
+</body>
+</html>

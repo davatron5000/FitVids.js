@@ -1,0 +1,148 @@
+::-moz-selection{ background:  #4a4d88; color:#f4f1de;  }
+::selection { background: #4a4d88; color: #f4f1de;  } 
+
+
+body {
+	background: #4584be;
+	color: #f4f1de;
+	font-size: 100%;
+	font-family: freight-sans-pro,sans-serif;
+ 	text-align: center;
+}
+
+ 	
+a.download{
+ 	margin-bottom: 0px;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	cursor: pointer;
+}
+
+.line1, .line2{
+	font-weight: 900;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: margin 0.15s ease-out;
+}
+
+.line1{
+ 	color: #e6c92e;
+ 	width: 60%;
+ 	margin: 0 20%;
+}
+
+.line2{
+ 	background: url(../img/arrow.png) no-repeat;
+ 	background-size:100%;
+ 	color: #4584be;
+ 	padding-bottom: 6em;
+ 	width: 40%;
+ 	margin: 0 30%;
+}
+	
+a:hover .line1{color:  #4a4d88;}
+a:hover .line2{color: #4a4d88;margin-top: .17em; margin-bottom: -.17em;}
+
+a{
+	-webkit-transition: color 0.15s ease-out;
+	-moz-transition: color 0.15s ease-out;
+ 	color: #e6c92e;
+ 	text-decoration: none;
+}
+
+a:hover{color: #4a4d88;}
+
+p{	font-size: 2.5em;margin: 0 0 .5em 0;}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	margin: 16% 0 4%;
+}
+
+footer{
+	font-size: .7em;
+	margin: 6% 0 15%;
+}
+
+
+h1 {
+	margin-bottom: 0;
+ 	line-height: 1.2;
+ 	text-transform: uppercase;
+ 	font-size: 100px;
+ 	text-align: center;
+ 	position:relative;
+ 	color: #e6c92e;
+ 	font-family: freight-sans-pro ,sans-serif;
+}
+
+h1:after {
+  	z-index: -1;
+  	position: absolute;
+ 	 left: 0;
+ 	 width: 100%;
+ 	 top:-.27em;
+  	font-size: 90%;
+  	color: #e36b23;
+  	content: attr(data-content);
+}
+
+h1:before {
+ 	 z-index: -2;
+  	position: absolute;
+  	left: 0;
+  	width: 100%;
+  	top:-.56em;
+  	font-size: 80%;
+  	color: #c44032;
+  	content: attr(data-content);
+}
+
+h1 b:after {
+  	z-index: -3;
+  	position: absolute;
+  	left: 0;
+  	width: 100%;
+  	top:-.9em;
+  	font-size: 70%;
+  	color: #4a4d88;
+  	content: attr(data-content);
+}
+
+h1 b:before {
+  	z-index: -4;
+  	position: absolute;
+  	left: 0;
+	width: 100%;
+  	top:-1.29em;
+  	font-size: 60%;
+  	color: #5da028;
+  	content: attr(data-content);
+}
+
+@media screen and (max-width:480px) {
+	p{	font-size: 1em;}
+	footer{font-size:.9em;}
+}
+
+@media screen and (max-device-width: 480px) {
+	p{	font-size: 1em;}
+	.container{width: 88%;}
+	footer{font-size: .8em;}
+}
+
+@media screen and (min-width: 481px) and (max-width:780px) {
+	p{	font-size: 1.5em;}
+	footer{font-size: .8em;}
+}
+@media screen and (min-width: 1200px){
+	p{	font-size: 3.5em;}
+	footer{font-size: .8em;}
+}
