@@ -145,6 +145,7 @@ h1 b:before {
 
 @media screen and (max-width:480px) {
 	p{	font-size: 1em;}
+	.container{width: 80%;}
 	footer{font-size:.9em;}
 }
 
