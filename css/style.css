@@ -48,7 +48,7 @@ a.download{
 }
 
 .line2{
- 	background: url(/img/arrow.png) no-repeat;
+ 	background: url(../img/arrow.png) no-repeat;
  	background-size:100%;
  	color: #4584be;
  	padding-bottom: 6em;
