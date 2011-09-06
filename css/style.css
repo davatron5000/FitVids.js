@@ -24,18 +24,31 @@ a.download{
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
-	-webkit-transition: all 0.15s ease-out;
-	-moz-transition: margin 0.15s ease-out;
+	-webkit-transition-property: margin, color;
+  	-webkit-transition-duration: 0.15s;
+  	-webkit-transition-timing-function: ease-out;
+	-moz-transition-property: margin, color;
+  	-moz-transition-duration: 0.15s;
+  	-moz-transition-timing-function: ease-out;
+	-o-transition-property: margin, color;
+  	-o-transition-duration: 0.15s;
+  	-o-transition-timing-function: ease-out;
+	-ms-transition-property: margin, color;
+  	-ms-transition-duration: 0.15s;
+  	-ms-transition-timing-function: ease-out;
+	transition-property: margin, color;
+  	transition-duration: 0.15s;
+  	transition-timing-function: ease-out;
 }
 
 .line1{
  	color: #e6c92e;
- 	width: 60%;
- 	margin: 0 20%;
+ 	width: 76%;
+ 	margin: 0 12%;
 }
 
 .line2{
- 	background: url(../img/arrow.png) no-repeat;
+ 	background: url(/img/arrow.png) no-repeat;
  	background-size:100%;
  	color: #4584be;
  	padding-bottom: 6em;
@@ -49,6 +62,9 @@ a:hover .line2{color: #4a4d88;margin-top: .17em; margin-bottom: -.17em;}
 a{
 	-webkit-transition: color 0.15s ease-out;
 	-moz-transition: color 0.15s ease-out;
+    -o-transition: color 0.15s ease-out;
+    -ms-transition: color 0.15s ease-out;
+    transition:color 0.15s ease-out;
  	color: #e6c92e;
  	text-decoration: none;
 }
