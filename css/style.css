@@ -1,3 +1,4 @@
+
 ::-moz-selection{ background:  #4a4d88; color:#f4f1de;  }
 ::selection { background: #4a4d88; color: #f4f1de;  } 
 
@@ -71,11 +72,12 @@ a{
 
 a:hover{color: #4a4d88;}
 
-p{	font-size: 2.5em;margin: 0 0 .5em 0;}
+p{	font-size: 2.3em;margin: 0 0 .5em 0;}
 
 .container {
-	width: 70%;
+	width: 65%;
 	margin: 0 auto;
+	max-width: 1000px;
 }
 
 header {
@@ -156,10 +158,10 @@ h1 b:before {
 }
 
 @media screen and (min-width: 481px) and (max-width:780px) {
-	p{	font-size: 1.5em;}
+	p{	font-size: 1.67em;}
 	footer{font-size: .8em;}
 }
-@media screen and (min-width: 1200px){
-	p{	font-size: 3.5em;}
+@media screen and (min-width: 1210px){
+	p{	font-size: 3.2em;}
 	footer{font-size: .8em;}
 }
