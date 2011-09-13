@@ -11,7 +11,11 @@
 
 (function( $ ){
 
-  $.fn.fitVids = function() {
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null
+    }
+    
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
         
@@ -35,7 +39,11 @@
     </style>';
                       
     ref.parentNode.insertBefore(div,ref);
-  
+    
+    if ( options ) { 
+      $.extend( settings, options );
+    }
+    
     return this.each(function(){
       var selectors = [
         "iframe[src^='http://player.vimeo.com']", 
@@ -44,9 +52,13 @@
         "object", 
         "embed"
       ];
-
-      var $allVideos = $(this).find(selectors.join(','));
       
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+      
+      var $allVideos = $(this).find(selectors.join(','));
+
       $allVideos.each(function(){
         var $this = $(this), 
             height = this.tagName == 'OBJECT' ? $this.attr('height') : $this.height(),

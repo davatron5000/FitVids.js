@@ -26,10 +26,21 @@ This will wrap each video in a `div.fluid-width-video-wrapper` and apply the nec
 <tr><td>Blip.tv</td><td>Y</td></tr>
 <tr><td>Viddler</td><td>Y</td></tr>
 <tr><td>Kickstarter</td><td> Y</td></tr>
-<tr><td>more?</td><td>?</td></tr>
 </table>
 
+## Add Your Own Video Vendor
+Have a custom video player? We now have a `customSelector` option where you can add your own specific video vendor selector (_mileage may vary depending on vendor and fluidity of player_):
+
+```javascript
+  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^'http://mycoolvideosite.com'], iframe[src^='http://myviiids.com']"});
+  // Selectors are comma separated, just like CSS
+```
+
+_Note:_ This will be the quickest way to add your own custom vendor as well as test your player's compatibility with FitVids.
+
 ## Changelog
+* _09.02.11 - v1 - 2.376kb_
+  * Added `customSelector` option
 * _09.02.11 - v1 - 2.135kb_
 	* Initial release
 	* Vimeo,YouTube, Blip.tv, Viddler, Kickstarter
