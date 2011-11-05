@@ -10,6 +10,7 @@
 */
 
 (function( $ ){
+  var fitVids_done = 0;
 
   $.fn.fitVids = function( options ) {
     var settings = {
@@ -19,7 +20,7 @@
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
         
-  	div.className = 'fit-vids-style';
+    div.className = 'fit-vids-style';
     div.innerHTML = '&shy;<style>         \
       .fluid-width-video-wrapper {        \
          width: 100%;                     \
@@ -63,8 +64,18 @@
         var $this = $(this), 
             height = this.tagName == 'OBJECT' ? $this.attr('height') : $this.height(),
             aspectRatio = height / $this.width();
-        $this.wrap('<div class="fluid-width-video-wrapper" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
-        $this.removeAttr('height').removeAttr('width');
+        var skip = false;
+        try {
+          var theID = $this.parent('.fluid-width-video-wrapper').attr('id');
+          if (parseInt(theID.replace("fitvids_vid", "")) <= fitVids_done) {
+            skip = true;
+          }
+        } catch (err) {}
+        if (!skip) {
+          fitVids_done++;
+          $this.wrap('<div class="fluid-width-video-wrapper" id="fitvids_vid' + fitVids_done + '" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+          $this.removeAttr('height').removeAttr('width');
+        }
       });
     });
   
