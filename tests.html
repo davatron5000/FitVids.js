@@ -57,8 +57,10 @@
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
       <script src="jquery.fitvids.js"></script>
       <script>
-        //$(".container").fitVids();
-        $(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+        // Basic FitVids Test
+        $(".container").fitVids();
+        // Custom selector and No-Double-Wrapping Prevention Test
+        $(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});  
       </script>
       </body>
   </html>

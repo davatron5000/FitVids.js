@@ -60,8 +60,9 @@
       var $allVideos = $(this).find(selectors.join(','));
 
       $allVideos.each(function(){
-        var $this = $(this), 
-            height = this.tagName == 'OBJECT' ? $this.attr('height') : $this.height(),
+        var $this = $(this);
+        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; } 
+        var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
             aspectRatio = height / $this.width();
         $this.wrap('<div class="fluid-width-video-wrapper" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
