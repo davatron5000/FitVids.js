@@ -49,7 +49,8 @@
         "iframe[src^='http://player.vimeo.com']", 
         "iframe[src^='http://www.youtube.com']", 
         "iframe[src^='http://www.kickstarter.com']", 
-        "object", 
+        "object[data]",
+        "object[classid]:not(:has(object[data]))",
         "embed"
       ];
       
@@ -66,6 +67,7 @@
             aspectRatio = height / $this.width();
         $this.wrap('<div class="fluid-width-video-wrapper" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
+		$this.parent('.fluid-width-video-wrapper').parent('object').removeAttr('height').removeAttr('width');
       });
     });
   
