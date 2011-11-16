@@ -1,5 +1,5 @@
 /*global jQuery */
-/*! 
+/*!
 * FitVids 1.0
 *
 * Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
@@ -13,12 +13,13 @@
 
   $.fn.fitVids = function( options ) {
     var settings = {
-      customSelector: null
+      customSelector: null,
+      maxWidth: false
     }
-    
+
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
-        
+
   	div.className = 'fit-vids-style';
     div.innerHTML = '&shy;<style>         \
       .fluid-width-video-wrapper {        \
@@ -37,37 +38,45 @@
          height: 100%;                    \
       }                                   \
     </style>';
-                      
+
     ref.parentNode.insertBefore(div,ref);
-    
-    if ( options ) { 
+
+    if ( options ) {
       $.extend( settings, options );
     }
-    
+
     return this.each(function(){
       var selectors = [
-        "iframe[src^='http://player.vimeo.com']", 
-        "iframe[src^='http://www.youtube.com']", 
-        "iframe[src^='http://www.kickstarter.com']", 
-        "object", 
+        "iframe[src^='http://player.vimeo.com']",
+        "iframe[src^='http://www.youtube.com']",
+        "iframe[src^='http://www.kickstarter.com']",
+        "object",
         "embed"
       ];
-      
+
       if (settings.customSelector) {
         selectors.push(settings.customSelector);
       }
-      
+
       var $allVideos = $(this).find(selectors.join(','));
 
       $allVideos.each(function(){
         var $this = $(this);
-        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; } 
+        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
         var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
             aspectRatio = height / $this.width();
+
+        var originalWidth = $this.attr('width');
+
         $this.wrap('<div class="fluid-width-video-wrapper" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+
+        if (settings.maxWidth && originalWidth) {
+          $this.parent('.fluid-width-video-wrapper').wrap('<div class="max-width-video-wrapper" />').parent('.max-width-video-wrapper').css('max-width', originalWidth+"px");
+        }
+
         $this.removeAttr('height').removeAttr('width');
       });
     });
-  
+
   }
 })( jQuery );
