@@ -16,29 +16,32 @@
       customSelector: null
     }
     
-    var div = document.createElement('div'),
-        ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
+	var className = 'fit-vids-style';
+	if ( $('.' + className).length == 0 ) {
+	    var div = document.createElement('div'),
+	        ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
         
-  	div.className = 'fit-vids-style';
-    div.innerHTML = '&shy;<style>         \
-      .fluid-width-video-wrapper {        \
-         width: 100%;                     \
-         position: relative;              \
-         padding: 0;                      \
-      }                                   \
-                                          \
-      .fluid-width-video-wrapper iframe,  \
-      .fluid-width-video-wrapper object,  \
-      .fluid-width-video-wrapper embed {  \
-         position: absolute;              \
-         top: 0;                          \
-         left: 0;                         \
-         width: 100%;                     \
-         height: 100%;                    \
-      }                                   \
-    </style>';
+	  	div.className = className;
+	    div.innerHTML = '&shy;<style>         \
+	      .fluid-width-video-wrapper {        \
+	         width: 100%;                     \
+	         position: relative;              \
+	         padding: 0;                      \
+	      }                                   \
+	                                          \
+	      .fluid-width-video-wrapper iframe,  \
+	      .fluid-width-video-wrapper object,  \
+	      .fluid-width-video-wrapper embed {  \
+	         position: absolute;              \
+	         top: 0;                          \
+	         left: 0;                         \
+	         width: 100%;                     \
+	         height: 100%;                    \
+	      }                                   \
+	    </style>';
                       
-    ref.parentNode.insertBefore(div,ref);
+	    ref.parentNode.insertBefore(div,ref);
+	}
     
     if ( options ) { 
       $.extend( settings, options );
