@@ -32,7 +32,7 @@ This will wrap each video in a `div.fluid-width-video-wrapper` and apply the nec
 Have a custom video player? We now have a `customSelector` option where you can add your own specific video vendor selector (_mileage may vary depending on vendor and fluidity of player_):
 
 ```javascript
-  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^'http://mycoolvideosite.com'], iframe[src^='http://myviiids.com']"});
+  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^='http://mycoolvideosite.com'], iframe[src^='http://myviiids.com']"});
   // Selectors are comma separated, just like CSS
 ```
 
