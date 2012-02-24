@@ -61,15 +61,14 @@
 
       $allVideos.each(function(){
         var $this = $(this);
-        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; } 
+        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length || $this.parent('object[classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"]').length) { return; } 
         var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
             aspectRatio = height / $this.width();
-		if(!$this.attr('id')){
-			var videoID = 'fitvid' + Math.floor(Math.random()*999999);
-			$this.attr('id', videoID);
-		}
-        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
-        $this.removeAttr('height').removeAttr('width');
+    		if(!$this.attr('id')){
+    			var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+    			$this.attr('id', videoID);
+    		}
+        $this.wrap('<div class="fluid-width-video-wrapper" style="padding-top:' + (aspectRatio * 100) + '%;"></div>').removeAttr('height').removeAttr('width');
       });
     });
   
