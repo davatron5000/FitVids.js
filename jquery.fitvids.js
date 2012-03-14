@@ -50,7 +50,8 @@
         "iframe[src^='http://www.youtube.com']", 
         "iframe[src^='https://www.youtube.com']", 
         "iframe[src^='http://www.kickstarter.com']", 
-        "object", 
+        "object[data]",
+        "object[classid]:not(:has(object[data]))",
         "embed"
       ];
       
@@ -71,6 +72,7 @@
 		}
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
+		$this.parent('.fluid-width-video-wrapper').parent('object').removeAttr('height').removeAttr('width');
       });
     });
   
