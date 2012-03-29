@@ -14,7 +14,8 @@
   $.fn.fitVids = function( options ) {
     var settings = {
       customSelector: null,
-      maxWidth: false
+      maxWidth: false,
+      maxWidthDefault: 900
     }
 
     var div = document.createElement('div'),
@@ -68,10 +69,10 @@
 
         var originalWidth = $this.attr('width');
 
-        $this.wrap('<div class="fluid-width-video-wrapper" />').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
 
-        if (settings.maxWidth && originalWidth) {
-          $this.parent('.fluid-width-video-wrapper').wrap('<div class="max-width-video-wrapper" />').parent('.max-width-video-wrapper').css('max-width', originalWidth+"px");
+        if (settings.maxWidth && (originalWidth || settings.maxWidthDefault)) {
+          $this.parent('.fluid-width-video-wrapper').wrap('<div class="max-width-video-wrapper"></div>').parent('.max-width-video-wrapper').css('max-width', originalWidth ? originalWidth+"px" : settings.maxWidthDefault+"px");
         }
 
         $this.removeAttr('height').removeAttr('width');
