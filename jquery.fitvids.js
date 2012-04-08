@@ -49,9 +49,21 @@
         "iframe[src^='http://player.vimeo.com']", 
         "iframe[src^='http://www.youtube.com']", 
         "iframe[src^='https://www.youtube.com']", 
-        "iframe[src^='http://www.kickstarter.com']", 
+        "iframe[src^='http://www.kickstarter.com']",
+	"iframe[src^='http://www.funnyordie.com']",
+	"iframe[src^='http://media.mtvnservices.com']",
+	"iframe[src^='http://trailers.apple.com']",
+	"iframe[src^='http://www.brightcove.com']",
+	"iframe[src^='http://blip.tv']",
+	"iframe[src^='http://break.com']",
+	"iframe[src^='http://www.traileraddict.com']",
+	"iframe[src^='http://d.yimg.com']",
+	"iframe[src^='http://movies.yahoo.com']",
+	"iframe[src^='http://www.dailymotion.com']",
+	"iframe[src^='http://s.mcstatic.com']",
         "object", 
         "embed"
+
       ];
       
       if (settings.customSelector) {
