@@ -14,7 +14,9 @@
   $.fn.fitVids = function( options ) {
     var settings = {
       customSelector: null
-    }
+    };
+
+    var nVideoIDs = $('.fluid-width-video-wrapper').length;
     
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
@@ -65,8 +67,9 @@
         var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
             aspectRatio = height / $this.width();
 		if(!$this.attr('id')){
-			var videoID = 'fitvid' + Math.floor(Math.random()*999999);
-			$this.attr('id', videoID);
+			var videoID = 'fitvid' + nVideoIDs;
+      $this.attr('id', videoID);
+      nVideoIDs++;
 		}
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
