@@ -6,7 +6,7 @@ FitVids automates [the Intrinsic Ratio Method by Thierry Koblentz](http://www.al
 ## How Do I Use It?
 Include jQuery 1.7+ and FitVids.js in your layout and target your videos container with `fitVids()`.
 
-```javascript
+```html
 <script src="path/to/jquery.min.js"></script>
 <script src="path/to/jquery.fitvids.js"></script>
 <script>
