@@ -1,4 +1,5 @@
 /*global jQuery */
+/*jshint multistr:true */
 /*!
 * FitVids 1.0
 *
@@ -11,10 +12,12 @@
 
 (function( $ ){
 
+  "use strict";
+
   $.fn.fitVids = function( options ) {
     var settings = {
       customSelector: null
-    }
+    };
 
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
@@ -61,9 +64,9 @@
 
       $allVideos.each(function(){
         var $this = $(this);
-        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
-        var height = ( this.tagName.toLowerCase() == 'object' || $this.attr('height') ) ? $this.attr('height') : $this.height(),
-            width = $this.attr('width') ? $this.attr('width') : $this.width(),
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        var height = ( this.tagName.toLowerCase() === 'object' || $this.attr('height') ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = $this.attr('width') ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
         if(!$this.attr('id')){
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
@@ -73,5 +76,5 @@
         $this.removeAttr('height').removeAttr('width');
       });
     });
-  }
+  };
 })( jQuery );
