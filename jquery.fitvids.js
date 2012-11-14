@@ -51,6 +51,7 @@
       var selectors = [
         "iframe[src*='player.vimeo.com']",
         "iframe[src*='www.youtube.com']",
+        "iframe[src*='www.youtube-nocookie.com']",
         "iframe[src*='www.kickstarter.com']",
         "object",
         "embed"
