@@ -53,7 +53,7 @@
         "iframe[src*='www.youtube.com']",
         "iframe[src*='www.youtube-nocookie.com']",
         "iframe[src*='www.kickstarter.com']",
-        "object",
+        "object[class*='fitvids-object']",
         "embed"
       ];
 
