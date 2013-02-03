@@ -25,22 +25,40 @@ This will wrap each video in a `div.fluid-width-video-wrapper` and apply the nec
 <tr><td>Vimeo</td><td>Y</td></tr>
 <tr><td>Blip.tv</td><td>Y</td></tr>
 <tr><td>Viddler</td><td>Y</td></tr>
-<tr><td>Kickstarter</td><td> Y</td></tr>
 </table>
 
 ## Add Your Own Video Vendor
 Have a custom video player? We now have a `customSelector` option where you can add your own specific video vendor selector (_mileage may vary depending on vendor and fluidity of player_):
 
 ```javascript
-  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^='http://mycoolvideosite.com'], iframe[src^='http://myviiids.com']"});
+  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^='http://mysite.com'], iframe[src^='http://www.mysite.com']"});
   // Selectors are comma separated, just like CSS
 ```
 
 _Note:_ This will be the quickest way to add your own custom vendor as well as test your player's compatibility with FitVids.
 
+## Add Your Own Selectors
+
+```javascript
+  // As FitVids does not support object due to compatability issues with other video players. This will wrap object
+  $("#thing-with-videos").fitVids({ customSelector: "object"});
+  // FitVids will only wrap object code if it has the class `.fit-vids-allow`
+  $("#thing-with-videos").fitVids({ customSelector: "object[class*='fit-vids-allow']"});
+   // FitVids will n not wrap object code if it has the class `.fit-vids-ignore`
+  $("#thing-with-videos").fitVids({ customSelector: "object:not('.fit-vids-ignore')"}); 
+```
+
+_Note:_ This will be the quickest way to add your own selector as well as test your player's compatibility with FitVids.
+
+## Using in WordPress
+
+If you are using FitVids in WordPress then replace $ with jQuery
+
 ## Changelog
+* _03.02.13 - v2 - 2.851 kb - min 1.819 kb_
+	* Removed Kickstarter and object support so that users can deciede to support it or not
 * _09.02.11 - v1 - 2.376kb_
-  * Added `customSelector` option
+	* Added `customSelector` option
 * _09.02.11 - v1 - 2.135kb_
 	* Initial release
 	* Vimeo,YouTube, Blip.tv, Viddler, Kickstarter
