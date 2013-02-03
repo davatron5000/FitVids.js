@@ -52,11 +52,13 @@ _Note:_ This will be the quickest way to add your own selector as well as test y
 
 ## Using in WordPress
 
-If you are using FitVids on WordPress then replace $ with jQuery
+If you are using FitVids in WordPress then replace $ with jQuery
 
 ## Changelog
+* _03.02.13 - v2 - 2.851 kb - min 1.819 kb_
+	* Removed Kickstarter and object support so that users can deciede to support it or not
 * _09.02.11 - v1 - 2.376kb_
-  * Added `customSelector` option
+	* Added `customSelector` option
 * _09.02.11 - v1 - 2.135kb_
 	* Initial release
 	* Vimeo,YouTube, Blip.tv, Viddler, Kickstarter
