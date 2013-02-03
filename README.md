@@ -52,7 +52,7 @@ _Note:_ This will be the quickest way to add your own selector as well as test y
 
 ## Using in WordPress
 
-If you are using FitVids on WordPress then replace $ with jQuerey
+If you are using FitVids on WordPress then replace $ with jQuery
 
 ## Changelog
 * _09.02.11 - v1 - 2.376kb_
