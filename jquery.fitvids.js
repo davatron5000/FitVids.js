@@ -53,6 +53,7 @@
         "iframe[src*='www.youtube.com']",
         "iframe[src*='www.youtube-nocookie.com']",
         "iframe[src*='www.kickstarter.com']",
+        "iframe[src*='fast.wistia.net']",
         "object",
         "embed"
       ];
