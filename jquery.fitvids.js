@@ -50,9 +50,9 @@
     return this.each(function(){
       var selectors = [
         "iframe[src*='player.vimeo.com']",
-        "iframe[src*='www.youtube.com']",
-        "iframe[src*='www.youtube-nocookie.com']",
-        "iframe[src*='www.kickstarter.com']",
+        "iframe[src*='youtube.com']",
+        "iframe[src*='youtube-nocookie.com']",
+        "iframe[src*='kickstarter.com']",
         "object",
         "embed"
       ];
