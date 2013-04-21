@@ -23,6 +23,7 @@
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
 
     div.className = 'fit-vids-style';
+    div.style.display = 'none';
     div.innerHTML = '&shy;<style>         \
       .fluid-width-video-wrapper {        \
          width: 100%;                     \
