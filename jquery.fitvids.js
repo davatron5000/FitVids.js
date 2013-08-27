@@ -10,7 +10,7 @@
 * Date: Thu Sept 01 18:00:00 2011 -0500
 */
 
-(function( $ ){
+(function($, window, document, undefined){
 
   "use strict";
 
@@ -71,4 +71,4 @@
     });
   };
 // Works with either jQuery or Zepto
-})( window.jQuery || window.Zepto );
+})(this.jQuery || this.Zepto, this, this.document);
