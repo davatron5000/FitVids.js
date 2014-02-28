@@ -1,0 +1,29 @@
+{
+  "name": "jquery.fitvids",
+  "version": "1.1",
+  "main": "./jquery.fitvids.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.0"
+  },
+  "homepage": "https://github.com/davatron5000/FitVids.js",
+  "authors": [
+    "Dave Rupert <rupato@gmail.com>"
+  ],
+  "description": "FitVids makes video embeds responsive",
+  "keywords": [
+    "FitVids",
+    "Responsive",
+    "RWD",
+    "YouTube",
+    "Vimeo"
+  ],
+  "license": "WTFPL"
+}
