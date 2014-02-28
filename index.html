@@ -7,28 +7,26 @@
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	
+
 	<!-- javascripts -->
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script type="text/javascript" src="http://use.typekit.com/okm4wqr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="js/jquery.lettering-0.6.1.min.js"></script>
- 	<script src="js/jquery.fittext.js"></script>
- 	<script src="js/jquery.fitvids.js"></script>
-<script type="text/javascript">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="//rawgithub.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
+	<script src="//rawgithub.com/davatron5000/FitText.js/master/jquery.fittext.js"></script>
+	<script src="//rawgithub.com/davatron5000/FitVids.js/master/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-3299532-47']);
+	  _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-3299532-47']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 </head>
 
 <body>
@@ -39,7 +37,7 @@
 
     <iframe src="http://player.vimeo.com/video/28523422?title=0&amp;byline=0&amp;portrait=0&amp;color=4584be" width="800/embed/?moog_width=800" height="450" frameborder="0"></iframe>
 	</header>
-	
+
 	<section id="details" >
 	<p>A lightweight, easy-to-use jQuery plugin for fluid width video&nbsp;embeds.</p>
 	<a href="https://github.com/davatron5000/FitVids.js" class="download">Download<br/>On Github</a>
@@ -47,8 +45,8 @@
 	<footer>
 	<p>FitVids.js was built by <a href="http://chriscoyier.net/">Chris Coyier</a> and <a href="http://paravelinc.com/">Paravel</a><br>See also: <a href="http://letteringjs.com">Lettering.js</a> and <a href="http://fittextjs.com">FitText</a></p>
 	</footer>
-	
-	
+
+
 	<script type="text/javascript">
     $(".download").lettering('lines');
 		$("h1").fitText(0.515);
@@ -57,7 +55,5 @@
 		$(".container").fitVids();
 	</script>
 
-
-	
 </body>
 </html>
