@@ -5,6 +5,7 @@
 *
 * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
 * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Credit to Davi SMesquita - https://github.com/frkr
 * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 *
 */
@@ -58,6 +59,16 @@
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
           $this.attr('id', videoID);
         }
+		if($this.attr('src').indexOf('youtu.be')!=-1 || $this.attr('src').indexOf('youtube.com')!=-1){
+		  var srcYTRemove = $this.attr('src');
+		  if (srcYTRemove.indexOf('?')!=-1) {
+			srcYTRemove +='&amp;';
+		  } else {
+			srcYTRemove +='?';
+		  }
+		  srcYTRemove +='showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;autohide=0';
+		  $this.attr('src',srcYTRemove);
+		}
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
       });
