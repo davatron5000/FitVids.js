@@ -66,7 +66,7 @@
 		  } else {
 			srcYTRemove +='?';
 		  }
-		  srcYTRemove +='showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;autohide=0';
+		  srcYTRemove +='showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;autohide=1';
 		  $this.attr('src',srcYTRemove);
 		}
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
