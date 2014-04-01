@@ -15,7 +15,8 @@
 
   $.fn.fitVids = function( options ) {
     var settings = {
-      customSelector: null
+      customSelector: null,
+      maxAspectRatio: 1.0 // e.g.: 0.75 for 4x3, 0.5625 for 16x9
     };
 
     if(!document.getElementById('fit-vids-style')) {
@@ -59,6 +60,9 @@
         var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
             width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
+        if (aspectRatio > settings.maxAspectRatio) {
+          aspectRatio = settings.maxAspectRatio;
+        }
         if(!$this.attr('id')){
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
           $this.attr('id', videoID);
