@@ -15,7 +15,8 @@
 
   $.fn.fitVids = function( options ) {
     var settings = {
-      customSelector: null
+      customSelector: null,
+      ignore: null,
     };
 
     if(!document.getElementById('fit-vids-style')) {
@@ -45,11 +46,21 @@
         selectors.push(settings.customSelector);
       }
 
+      var ignoreList = '.fitvidsignore';
+
+      if(settings.ignore) {
+        ignoreList = ignoreList + ', ' + settings.ignore;
+      }
+
       var $allVideos = $(this).find(selectors.join(','));
       $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
 
       $allVideos.each(function(){
         var $this = $(this);
+        if($this.parents(ignoreList).length > 0) {
+          return; // Disable FitVids on this video.
+        }
         if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
         if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
         {

@@ -41,6 +41,16 @@ Have a custom video player? We now have a `customSelector` option where you can 
 
 _Note:_ This will be the quickest way to add your own custom vendor as well as test your player's compatibility with FitVids.
 
+## Ignore With Class
+Have a video you want FitVids to ignore? You can slap a class of `fitvidsignore` on your object or container and your video will be displayed as it is defined.
+
+If you'd like to add a custom block to ignore FitVids, use the `ignore` option.
+
+```javascript
+  $("#thing-with-videos").fitVids({ ignore: '.mycooldiv, #myviiid'});
+  // Selectors are comma separated, just like CSS
+```
+
 ## Known issues
 
 * Vimeo Autoplay API is not compatible with FitVids in IE11. You must manually wrap videos you want to autoplay.
