@@ -16,7 +16,7 @@
   $.fn.fitVids = function( options ) {
     var settings = {
       customSelector: null,
-      ignore: null,
+      ignore: null
     };
 
     if(!document.getElementById('fit-vids-style')) {
