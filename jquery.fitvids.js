@@ -38,6 +38,9 @@
         "iframe[src*='youtube.com']",
         "iframe[src*='youtube-nocookie.com']",
         "iframe[src*='kickstarter.com'][src*='video.html']",
+        "iframe[src*='player.vimeo.com']",
+        "iframe[src*='soundcloud.com']",
+        "iframe[src*='mixcloud.com']",
         "object",
         "embed"
       ];
