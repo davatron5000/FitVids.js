@@ -67,8 +67,8 @@
           $this.attr('height', 9);
           $this.attr('width', 16);
         }
-        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
-            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && String($this.attr('height')).indexOf('%') < 0 && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = ($this.attr('width') && String($this.attr('width')).indexOf('%') < 0 && !isNaN(parseInt($this.attr('width'), 10))) ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
         if(!$this.attr('id')){
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
