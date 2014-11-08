@@ -1,7 +1,7 @@
 /*global jQuery */
 /*jshint browser:true */
 /*!
-* FitVids 1.1
+* FitVids 1.2
 *
 * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
 * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
@@ -9,7 +9,13 @@
 *
 */
 
-(function( $ ){
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define((window.Zepto ? ['zepto'] : ['jquery']), factory);
+  } else {
+    factory(root.Zepto || root.jQuery);
+  }
+}(this, function($) {
 
   'use strict';
 
@@ -79,5 +85,4 @@
       });
     });
   };
-// Works with either jQuery or Zepto
-})( window.jQuery || window.Zepto );
+}));
