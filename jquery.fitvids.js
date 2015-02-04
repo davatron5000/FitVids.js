@@ -38,6 +38,8 @@
         'iframe[src*="youtube.com"]',
         'iframe[src*="youtube-nocookie.com"]',
         'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'iframe[src*="livestream.com"]',
+        'iframe[src*="ustream.tv"]',
         'object',
         'embed'
       ];
