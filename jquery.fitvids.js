@@ -71,7 +71,7 @@
             width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
         if(!$this.attr('id')){
-          var videoID = 'fitvid' + count);
+          var videoID = 'fitvid' + count;
           $this.attr('id', videoID);
         }
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
