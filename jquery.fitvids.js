@@ -9,7 +9,20 @@
 *
 */
 
-;(function( $ ){
+!function(factory) {
+  if ("object" == typeof exports && "undefined" != typeof module) {
+    module.exports = factory;
+  }
+  else if ("function" == typeof define && define.amd) {
+    define(['jquery'], factory);
+  }
+  else {
+    var n;
+    "undefined" != typeof window ? n = window : "undefined" != typeof global ? n = global : "undefined" != typeof self && (n = self);
+    // Works with either jQuery or Zepto
+    factory(n.jQuery || n.Zepto);
+  }
+}(function( $ ){
 
   'use strict';
 
@@ -79,5 +92,4 @@
       });
     });
   };
-// Works with either jQuery or Zepto
-})( window.jQuery || window.Zepto );
+});
