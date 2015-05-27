@@ -51,7 +51,7 @@ If you'd like to add a custom block to ignore FitVids, use the `ignore` option.
   // Selectors are comma separated, just like CSS
 ```
 
-## Target Videos Uploaded embedded without classes or containers 
+## Target Videos embedded without classes or containers 
 Customers/clients will occasionally add a video to a general content area or article and this may be without a class or container that you're targetting. A solution to this is to target the parent of videos, using something like the below;
 
 ```javascript
