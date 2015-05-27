@@ -51,6 +51,16 @@ If you'd like to add a custom block to ignore FitVids, use the `ignore` option.
   // Selectors are comma separated, just like CSS
 ```
 
+## Target Videos Uploaded embedded without classes or containers 
+Customers/clients will occasionally add a video to a general content area or article and this may be without a class or container that you're targetting. A solution to this is to target the parent of videos, using something like the below;
+
+```javascript
+  $('iframe[src*="youtube"]').parent().fitVids();
+  // You can change the selector to suit potential video providers, or chain them if your customer is likely to use more than one provider
+```
+
+By targetting the iframe/embed parent you can then dynamically add in the fitVids special sauce on the fly without needing to know the container ahead of time.
+
 ## Known issues
 
 * Vimeo Autoplay API is not compatible with FitVids in IE11. You must manually wrap videos you want to autoplay.
