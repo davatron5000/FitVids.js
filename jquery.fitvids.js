@@ -37,6 +37,7 @@
         'iframe[src*="youtube.com"]',
         'iframe[src*="youtube-nocookie.com"]',
         'iframe[src*="kickstarter.com"][src*="video.html"]',
+        "iframe[src*='brightcove']",
         'object',
         'embed'
       ];
@@ -80,3 +81,6 @@
   };
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
+
+//Initialize fitVids
+$('body').fitVids();
