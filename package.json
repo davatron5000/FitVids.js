@@ -1,0 +1,26 @@
+{
+  "name": "fitvids.js",
+  "version": "1.0.0",
+  "description": "FitVids makes video embeds responsive",
+  "main": "jquery.fitvids.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rentpath/FitVids.js.git"
+  },
+  "keywords": [
+    "FitVids",
+    "Responsive",
+    "RWD",
+    "YouTube",
+    "Vimeo"
+  ],
+  "author": "Dave Rupert",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/rentpath/FitVids.js/issues"
+  },
+  "homepage": "https://github.com/rentpath/FitVids.js"
+}
