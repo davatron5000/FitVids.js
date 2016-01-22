@@ -1,5 +1,5 @@
 {
-  "name": "fitvids",
+  "name": "jquery-fitvids",
   "version": "1.1.0",
   "description": "FitVids makes video embeds responsive",
   "main": "jquery.fitvids.js",
