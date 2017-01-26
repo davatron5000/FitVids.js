@@ -61,6 +61,9 @@
           return; // Disable FitVids on this video.
         }
         if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        if( ( $this.css('width') && $this.attr('width').indexOf("%") ) || ( $this.css('height') && $this.attr('height').indexOf("%") ) ){
+          $this.removeAttr('width').removeAttr('height');
+        }
         if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
         {
           $this.attr('height', 9);
