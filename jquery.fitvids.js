@@ -60,8 +60,9 @@
         if($this.parents(ignoreList).length > 0) {
           return; // Disable FitVids on this video.
         }
+
         if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
-        if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
+        if ((!/height/.test($this.attr('style')) && !/width/.test($this.attr('style'))) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
         {
           $this.attr('height', 9);
           $this.attr('width', 16);
@@ -76,6 +77,11 @@
         }
         $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
         $this.removeAttr('height').removeAttr('width');
+        // Now that we've used any height/width (typically specified in px) in the style attribute
+        // to make this iframe responsive, remove the height/width as they'd otherwise contrain the iframe.
+        if ($this.attr('style')) {
+            $this.css({height: '', width: ''});
+        }
       });
     });
   };
