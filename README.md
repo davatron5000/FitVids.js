@@ -27,6 +27,7 @@ This will wrap each video in a `div.fluid-width-video-wrapper` and apply the nec
 <tr><td>Blip.tv</td><td>Y*</td></tr>
 <tr><td>Viddler</td><td>Y*</td></tr>
 <tr><td>Kickstarter</td><td> Y*</td></tr>
+<tr><td>Facebook</td><td>Y</td></tr>
 </table>
 
 `*` means native support for these may be deprecated. If your video platform is not currently supported, try adding it via a `customSelector`...
@@ -51,7 +52,7 @@ If you'd like to add a custom block to ignore FitVids, use the `ignore` option.
   // Selectors are comma separated, just like CSS
 ```
 
-## Target Videos embedded without classes or containers 
+## Target Videos embedded without classes or containers
 Customers/clients will occasionally add a video to a general content area or article and this may be without a class or container that you're targetting. A solution to this is to target the parent of videos, using something like the below;
 
 ```javascript
