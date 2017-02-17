@@ -37,7 +37,7 @@
         'iframe[src*="youtube.com"]',
         'iframe[src*="youtube-nocookie.com"]',
         'iframe[src*="kickstarter.com"][src*="video.html"]',
-        'iframe[src*="facebook.com"]',
+        'iframe[src*="facebook.com\/plugins\/video.php"]',
         'object',
         'embed'
       ];
