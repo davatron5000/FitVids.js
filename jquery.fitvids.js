@@ -37,6 +37,7 @@
         'iframe[src*="youtube.com"]',
         'iframe[src*="youtube-nocookie.com"]',
         'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'iframe[src*="facebook.com\/plugins\/video.php"]',
         'object',
         'embed'
       ];
@@ -79,9 +80,9 @@
       });
     });
   };
-  
+
   // Internal counter for unique video names.
   $.fn.fitVids._count = 0;
-  
+
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
