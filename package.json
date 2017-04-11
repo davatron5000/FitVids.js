@@ -1,0 +1,8 @@
+{
+  "name": "fitVids",
+  "version": "1.0.0",
+  "main": "jquery.fitvids.js",
+  "repository": "gogs@gogs:mono/fitVids.git",
+  "author": "Dave Rupert <rupato@gmail.com>",
+  "license": "MIT"
+}
