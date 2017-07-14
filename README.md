@@ -1,6 +1,8 @@
 # Introducing FitVids.js
 A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
 
+[![Build Status](https://travis-ci.org/monosolutions/FitVids.js.svg?branch=master)](https://travis-ci.org/monosolutions/FitVids.js)
+
 FitVids automates [the Intrinsic Ratio Method by Thierry Koblentz](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/) to achieve fluid width videos in your responsive web design.
 
 ## How Do I Use It?
