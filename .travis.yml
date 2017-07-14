@@ -1,0 +1,10 @@
+language: node_js
+os:
+  - linux
+language: node_js
+node_js:
+  - "stable"
+before_script:
+  - "python -m SimpleHTTPServer 8055 &"
+script:
+    - npm test

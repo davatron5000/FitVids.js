@@ -4,5 +4,13 @@
   "main": "jquery.fitvids.js",
   "repository": "gogs@gogs:mono/fitVids.git",
   "author": "Dave Rupert <rupato@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "nightwatch -c nightwatch.config.js"
+  },
+  "devDependencies": {
+    "cbt_tunnels": "^0.1.0",
+    "dotenv": "^4.0.0",
+    "nightwatch": "^0.9.16"
+  }
 }
