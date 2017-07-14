@@ -1,6 +1,6 @@
 /*jshint browser:true */
 /*!
-* FitVids 1.1
+* FitVids 1.2
 *
 * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
 * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
@@ -80,12 +80,12 @@
       });
     });
   };
-  
+
   // Internal counter for unique video names.
   $.fn.fitVids._count = 0;
-  
+
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 
-//Initialize fitVids
+//Initialize fitVids automatically for the entire body
 $('body').fitVids();
