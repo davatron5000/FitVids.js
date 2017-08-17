@@ -1,0 +1,16 @@
+{
+	"name": "davatron5000/FitVids.js",
+	"description": "A lightweight, easy-to-use jQuery plugin for fluid width video embeds.",
+	"homepage": "http://fitvidsjs.com",
+	"keywords": [
+		"video",
+		"responsive"
+	],
+	"authors": [{
+		"name": "Dave Rupert",
+		"email": "rupato@gmail.com",
+		"homepage": "http://daverupert.com"
+	}],
+	"license": "WTFPL",
+	"minimum-stability": "dev"
+}
