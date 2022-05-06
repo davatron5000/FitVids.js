@@ -36,6 +36,8 @@
         'iframe[src*="player.vimeo.com"]:not(.monovideobg)',
         'iframe[src*="youtube.com"]:not(.monovideobg)',
         'iframe[src*="youtube-nocookie.com"]:not(.monovideobg)',
+        'iframe[data-cookieblock-src*="youtube.com"]:not(.monovideobg)',
+        'iframe[data-cookieblock-src*="youtube-nocookie.com"]:not(.monovideobg)',
         'iframe[src*="kickstarter.com"][src*="video.html"]:not(.monovideobg)',
         "iframe[src*='brightcove']:not(.monovideobg)",
         'object',
